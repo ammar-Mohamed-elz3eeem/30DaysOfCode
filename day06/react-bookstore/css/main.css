@@ -1,0 +1,9 @@
+.navbar-brand {
+	padding-right: var(--bs-navbar-nav-link-padding-x);
+    padding-left: var(--bs-navbar-nav-link-padding-x);
+	font-size: 4rem;
+}
+
+.modal.show {
+	display: block;
+}

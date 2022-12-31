@@ -1,0 +1,39 @@
+.navbar-brand {
+	padding-right: var(--bs-navbar-nav-link-padding-x);
+    padding-left: var(--bs-navbar-nav-link-padding-x);
+}
+
+.minicart .minicart-menu {
+	position: fixed;
+	right: 0;
+	top: 0;
+	height: 100%;
+	width: 350px;
+	z-index: 2;
+	opacity: 0;
+	transform: translateX(100%);
+	transition: all 0.3s linear;
+}
+.minicart .minicart-menu.show {
+	opacity: 1;
+	transform: translateX(0);
+}
+.minicart .minicart-menu .minicart-header {
+	margin: 1.75rem 1rem;
+}
+
+.minicart .minicart-menu .minicart-body {
+	margin: 1.75rem 1rem;
+}
+
+.cartitem-image {
+	height: 100px;
+	width: 70px;
+	border-radius: 10px;
+	background-position: center;
+	background-size: cover;
+}
+
+.flex-grow {
+	flex-grow: 1;
+}
