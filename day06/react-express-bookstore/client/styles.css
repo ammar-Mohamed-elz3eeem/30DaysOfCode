@@ -1,0 +1,51 @@
+.navbar-brand {
+	padding-right: var(--bs-navbar-nav-link-padding-x);
+    padding-left: var(--bs-navbar-nav-link-padding-x);
+}
+
+.minicart .minicart-menu {
+	position: fixed;
+	right: 0;
+	top: 0;
+	height: 100%;
+	width: 350px;
+	z-index: 2;
+	opacity: 0;
+	transform: translateX(100%);
+	transition: all 0.3s linear;
+	overflow-y: auto;
+}
+.minicart .minicart-menu.show {
+	opacity: 1;
+	transform: translateX(0);
+}
+.minicart .minicart-menu .minicart-header {
+	margin: 1.75rem 1rem;
+}
+
+.minicart .minicart-menu .minicart-body {
+	margin: 1.75rem 1rem;
+}
+
+.cartitem-image {
+	height: 100px;
+	width: 70px;
+	border-radius: 10px;
+	background-position: center;
+	background-size: cover;
+}
+
+.flex-grow {
+	flex-grow: 1;
+}
+
+.close-rounded {
+	position: absolute;
+	top: 7px;
+	right: 7px;
+	border-radius: 36px;
+	width: 0.25em;
+	height: 0.25em;
+	padding: 0.7em 0.7em;
+	background-color: rgba(255,200,255,0.8);
+}
