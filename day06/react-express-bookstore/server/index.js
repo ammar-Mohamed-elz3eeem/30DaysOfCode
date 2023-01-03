@@ -3,13 +3,11 @@ import { MongoClient } from "mongodb";
 import bodyParser from "body-parser";
 import errorHandler from "errorhandler";
 import cors from "cors";
-import mongoose from "mongoose";
+import mongoose, { createConnection } from "mongoose";
 
 const db = mongoose.connect("mongodb://localhost:27017/books", (err) => {
 	console.error(err)
 })
-
-
 
 const app = express();
 const connection = MongoClient.connect("mongodb://localhost:27017/books").then((connectionRes) => {
