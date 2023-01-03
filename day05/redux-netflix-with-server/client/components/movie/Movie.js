@@ -10,7 +10,11 @@ const axios = require("axios");
 
 const Movie = (props) => {
 
-	const { movie = {} } = props;
+	const {
+		movie = {
+		  starring: []
+		}
+	  } = props
 
 	const params = useParams();
 
@@ -28,13 +32,10 @@ const Movie = (props) => {
 		}`;
 		const api = axios.create({baseURL: "http://localhost:3001"});
 		api.get(`/q?query=${query}`).then(res => {
-			console.log(props);
 			props.fetchMovie(res);
-		})
+		});
+		console.log(movie);
 	}, [params.id])
-
-
-
 
 	return (
 		<div className={styles.movie} 
@@ -44,6 +45,7 @@ const Movie = (props) => {
 				<div className={styles.title}>{movie.title}</div>
 				<div className={styles.year}>{movie.year}</div>
 				<div className={styles.starring}>
+					{movie.starring.map((actor, idx) => <div key={idx} className={styles.actor}>{actor.name}</div>)}
 				</div>
 			</div>
 			<Link className={styles.closeButton} to="/movies">Back to Movies</Link>

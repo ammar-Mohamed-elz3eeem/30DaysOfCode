@@ -23,7 +23,6 @@ const Movies = (props) => {
 		});
 		appAxios.get(`/q?query=${query}`).then(res => {
 			props.fetchMovies(res)
-			console.log(props)
 		})
 	}, []);
 
@@ -48,6 +47,5 @@ const Movies = (props) => {
 }
 
 module.exports = connect( ({movies}) => {
-		console.log(movies)
 		return {movies: movies.all}
 	}, { fetchMovies: fetchMoviesAction })(Movies)
